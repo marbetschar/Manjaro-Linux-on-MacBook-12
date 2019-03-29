@@ -1,0 +1,130 @@
+alsa-firmware
+alsa-utils
+autoconf
+automake
+avahi
+>extra baobab
+binutils
+bison
+>extra brasero
+fakeroot
+firefox
+flex
+>extra dconf-editor
+deepin-calendar
+>extra deepin-calculator
+deepin-file-manager
+deepin-gtk-theme
+>extra deepin-draw
+>extra deepin-image-viewer
+>extra deepin-movie
+>extra deepin-music
+>extra deepin-picker
+>extra deepin-screen-recorder
+>extra deepin-screenshot
+>extra deepin-system-monitor
+deepin-terminal
+dmidecode
+>extra downgrade
+>extra evince
+>extra evolution
+>extra file-roller
+>extra galculator
+>extra gcc
+>multilib gcc-libs-multilib
+>multilib gcc-multilib
+gedit
+>extra gimp
+>extra git
+gksu
+>extra gparted
+>extra gst-libav
+>extra gst-plugins-bad
+>extra gst-plugins-base
+>extra gst-plugins-good
+>extra gst-plugins-ugly
+>extra gstreamer
+gufw
+gvfs-afc
+gvfs-gphoto2
+gvfs-mtp
+gvfs-smb
+hexchat
+htop
+inxi
+>extra isousb
+>extra jre8-openjdk
+>extra jre8-openjdk-headless
+>multilib lib32-flex
+>extra libdvdcss
+>extra libimobiledevice
+>extra libreoffice-fresh
+libtool
+KERNEL-headers # needed for deepin-anything and its vfs_monitor dkms-module...
+m4
+make
+manjaro-alsa
+manjaro-browser-settings
+manjaro-deepin-settings
+>extra manjaro-documentation-en
+manjaro-hello
+manjaro-hotfixes
+>extra manjaro-printer
+manjaro-pulse
+manjaro-settings-manager-notifier
+mesa-demos
+mlocate
+mobile-broadband-provider-info
+modemmanager
+>multilib lib32-mesa-demos
+netctl
+networkmanager
+networkmanager-openconnect
+networkmanager-openvpn
+networkmanager-pptp
+networkmanager-vpnc
+nss-mdns
+ntp
+openresolv
+pamac
+patch
+>extra patchutils
+pkg-config
+polkit-gnome
+>extra poppler-data
+>extra powertop
+>extra pulseaudio-bluetooth
+pulseaudio-ctl
+pulseaudio-zeroconf
+>extra redshift
+screenfetch
+>extra subversion
+>extra sushi
+syslog-ng
+>extra terminus-font
+>extra transmission-gtk
+>extra ttf-bitstream-vera
+>extra ttf-dejavu
+>extra ttf-droid
+>extra ttf-inconsolata
+>extra ttf-indic-otf
+>extra ttf-liberation
+>extra adapta-maia-theme
+>extra xarchiver
+>extra xcursor-breeze
+xdg-su
+xdg-utils
+xf86-input-elographics
+xf86-input-evdev
+xf86-input-keyboard
+xf86-input-libinput
+xf86-input-mouse
+xf86-input-void
+xorg-twm
+xorg-xinit
+>extra xsane
+>extra xsane-gimp
+>extra yaourt
+xdg-user-dirs
+xorg-xhost
+xorg-server
