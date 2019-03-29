@@ -128,3 +128,6 @@ xorg-xinit
 xdg-user-dirs
 xorg-xhost
 xorg-server
+
+# macbook12-repo
+macbook12-spi-driver-dkms

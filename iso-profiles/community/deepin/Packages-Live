@@ -8,3 +8,6 @@ manjaro-live-systemd
 mkinitcpio-nfs-utils
 nbd
 squashfs-tools
+
+# macbook12-repo
+macbook12-spi-driver-dkms
