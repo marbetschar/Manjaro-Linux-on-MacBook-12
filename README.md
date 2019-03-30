@@ -86,7 +86,7 @@ macbook12-spi-driver-dkms
 ### Build iso
 
 ```
-ISO_PROFILE=community/deepin
+export ISO_PROFILE=community/deepin
 cd ~/iso-profiles
 cd $(dirname $ISO_PROFILE)
 # `buildiso` needs to be run as root - sudo does not work!
