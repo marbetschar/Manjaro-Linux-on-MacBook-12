@@ -2,7 +2,7 @@
 Online repository with a customized Manjaro .iso which runs on MacBook 12".
 
 ## Downloads
-- [.iso Manjaro Deepin for MacBook 12"](???)
+- [Manjaro Deepin for MacBook 12"](https://github.com/marbetschar/Manjaro-Linux-on-MacBook-12/releases)
 
 ## How the .iso was built
 
@@ -79,9 +79,25 @@ Server = https://manjaro.marco.betschart.name/$repo/$arch
 Add the built macbook12 package name at the end to the list of packages in `Packages-Desktop` and `Packages-Live` (stored in `~/iso-profiles/$ISO_PROFILE`):
 
 ```
-#macbook12-repo
+# macbook12-repo
 macbook12-spi-driver-dkms
 ```
+
+#### Make sure the driver is loaded at boot
+
+Create a file called `modules` with the following content:
+
+```
+# macbook12 apple spi
+applespi
+spi_pxa2xx_platform
+intel_lpss_pci
+```
+
+... and copy it to the following two locations:
+
+- `~/iso-profiles/$ISO_PROFILE/desktop-overlay/etc/initramfs-tools/modules`
+- `~/iso-profiles/$ISO_PROFILE/live-overlay/etc/initramfs-tools/modules`
 
 ### Build iso
 
@@ -95,6 +111,10 @@ cd $(dirname $ISO_PROFILE)
 su
 buildiso -p $(basename $ISO_PROFILE) -k linux414 -a x86_64 -b stable
 ```
+
+### Create a bootable media with the iso
+
+Now you are finished creating the iso. Now create a bootable media from this iso file and you should be all set.
 
 ## Further reading
 - [Build Manjaro ISOs with buildiso](https://wiki.manjaro.org/Build_Manjaro_ISOs_with_buildiso)
