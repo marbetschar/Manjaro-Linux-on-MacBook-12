@@ -96,8 +96,8 @@ intel_lpss_pci
 
 ... and copy it to the following two locations:
 
-- `~/iso-profiles/$ISO_PROFILE/desktop-overlay/etc/initramfs-tools/modules`
-- `~/iso-profiles/$ISO_PROFILE/live-overlay/etc/initramfs-tools/modules`
+- `~/iso-profiles/$ISO_PROFILE/desktop-overlay/etc/modules`
+- `~/iso-profiles/$ISO_PROFILE/live-overlay/etc/modules`
 
 ### Build iso
 
