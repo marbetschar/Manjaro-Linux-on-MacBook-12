@@ -1,4 +1,4 @@
-# Manjaro-Linux-on-MacBook-12
+# Manjaro Linux on MacBook 12"
 Online repository with a customized Manjaro .iso which runs on MacBook 12".
 
 ## Downloads
@@ -85,13 +85,15 @@ macbook12-spi-driver-dkms
 
 ### Build iso
 
+At the time of this writing (31st of March, 2019) you need to use lin414 as kernel. If you use newer ones, builiso will fail!
+
 ```
 export ISO_PROFILE=community/deepin
 cd ~/iso-profiles
 cd $(dirname $ISO_PROFILE)
 # `buildiso` needs to be run as root - sudo does not work!
 su
-buildiso -p $(basename $ISO_PROFILE)
+buildiso -p $(basename $ISO_PROFILE) -k lin414 -a x86_64 -b stable
 ```
 
 ## Further reading
