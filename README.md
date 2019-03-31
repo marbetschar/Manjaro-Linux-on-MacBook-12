@@ -2,7 +2,7 @@
 Online repository with a customized Manjaro .iso which runs on MacBook 12".
 
 ## Downloads
-- [Manjaro Deepin for MacBook 12"](releases)
+- [Manjaro Deepin for MacBook 12"](https://github.com/marbetschar/Manjaro-Linux-on-MacBook-12/releases)
 
 ## How the .iso was built
 
