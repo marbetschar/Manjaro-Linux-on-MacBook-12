@@ -85,7 +85,7 @@ macbook12-spi-driver-dkms
 
 #### Make sure the driver is loaded at boot
 
-Create a file called `modules` with the following content:
+Create a file called `macbook12.conf` with the following content:
 
 ```
 # macbook12 apple spi
@@ -96,8 +96,8 @@ intel_lpss_pci
 
 ... and copy it to the following two locations:
 
-- `~/iso-profiles/$ISO_PROFILE/desktop-overlay/etc/modules`
-- `~/iso-profiles/$ISO_PROFILE/live-overlay/etc/modules`
+- `~/iso-profiles/$ISO_PROFILE/desktop-overlay/etc/modules-load.d/macbook12.conf`
+- `~/iso-profiles/$ISO_PROFILE/live-overlay/etc/modules-load.d/macbook12.conf`
 
 ### Build iso
 
