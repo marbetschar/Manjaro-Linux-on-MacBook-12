@@ -117,8 +117,8 @@ cd $(dirname $ISO_PROFILE)
 buildiso -f -p $(basename $ISO_PROFILE) -k linux419 -b stable -a x86_64
 ```
 
->
-> If you encounter an error saying...
+#### If you encounter an error saying...
+
 >
 > *`Failed to convert to ACE; could not convert string to UTF-8`*
 >
@@ -127,6 +127,14 @@ buildiso -f -p $(basename $ISO_PROFILE) -k linux419 -b stable -a x86_64
 > *double check your encoding and make sure your `user-repos.conf` is UTF-8 and
 > does not contain any strange hidden characters! If in doubt,
 > use a coding editor and create a new one from scratch!*
+>
+
+>
+> *`error: target not found: yaourt`*
+>
+> ... then make sure you ...
+>
+> replace `yaourt` in `Packages-Desktop` with `yay`.
 >
 
 ### Create a bootable media with the iso
