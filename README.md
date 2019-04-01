@@ -83,7 +83,15 @@ Add the built macbook12 package name at the end to the list of packages in `Pack
 macbook12-spi-driver-dkms
 ```
 
-#### Make sure the driver is loaded at boot
+#### Ignore KERNEL-rt3562sta
+
+Add a hash-sign in front of `KERNEL-rt3562sta` in the `~/iso-profiles/shared/Packages-Mhwd` file to avoid installing this package if you are building for `linux419` - otherwise you'll likely encounter a `error: target not found: linux419-rt3562sta` during the `buildiso` command:
+
+```
+#KERNEL-rt3562sta
+```
+
+#### Make sure the macbook12 drivers are loaded at boot
 
 Create a file called `macbook12.conf` with the following content:
 
@@ -101,20 +109,29 @@ intel_lpss_pci
 
 ### Build iso
 
-At the time of this writing (31st of March, 2019) you need to use `linux414` as kernel. If you use newer ones, `buildiso` will fail!
-
 ```
 export ISO_PROFILE=community/deepin
 cd ~/iso-profiles
 cd $(dirname $ISO_PROFILE)
-# `buildiso` needs to be run as root - sudo does not work!
-su
-buildiso -p $(basename $ISO_PROFILE) -k linux414 -a x86_64 -b stable
+# `buildiso` does not need to be run as root!
+buildiso -f -p $(basename $ISO_PROFILE) -k linux419 -b stable -a x86_64
 ```
+
+>
+> If you encounter an error saying...
+>
+> *`Failed to convert to ACE; could not convert string to UTF-8`*
+>
+> ... then make sure you ...
+>
+> *double check your encoding and make sure your `user-repos.conf` is UTF-8 and
+> does not contain any strange hidden characters! If in doubt,
+> use a coding editor and create a new one from scratch!*
+>
 
 ### Create a bootable media with the iso
 
-Now you are finished creating the iso. Now create a bootable media from this iso file and you should be all set.
+Now you are finished creating the iso. Create a bootable media from it and you should be all set.
 
 ## Further reading
 - [Build Manjaro ISOs with buildiso](https://wiki.manjaro.org/Build_Manjaro_ISOs_with_buildiso)
