@@ -2,6 +2,8 @@
 Online repository with a customized Manjaro .iso which runs on MacBook 12".
 
 ## Downloads
+
+- [Manjaro KDE for MacBook 12"](https://github.com/marbetschar/Manjaro-Linux-on-MacBook-12/releases)
 - [Manjaro Deepin for MacBook 12"](https://github.com/marbetschar/Manjaro-Linux-on-MacBook-12/releases)
 
 ## How the .iso was built
@@ -19,7 +21,7 @@ sudo pacman -Syu manjaro-tools
 #### Copy iso-profile template
 
 ```
-ISO_PROFILE=community/deepin
+ISO_PROFILE=community/deepin    # or ISO_PROFILE=manjaro/kde
 mkdir -p ~/iso-profiles
 cp -r /usr/share/manjaro-tools/iso-profiles/shared ~/iso-profiles/shared
 mkdir -p ~/iso-profiles/$ISO_PROFILE
@@ -61,7 +63,7 @@ repo-add macbook12-repo.db.tar.gz *.pkg.tar.*
 Create `user-repos.conf` in your iso profile:
 
 ```
-ISO_PROFILE=community/deepin
+ISO_PROFILE=community/deepin    # or ISO_PROFILE=manjaro/kde
 cd ~/iso-profiles/$ISO_PROFILE
 vi user-repos.conf
 ```
@@ -79,7 +81,7 @@ Server = https://manjaro.marco.betschart.name/$repo/$arch
 Add the built macbook12 package name at the end to the list of packages in `Packages-Desktop` and `Packages-Live` (stored in `~/iso-profiles/$ISO_PROFILE`):
 
 ```
-# macbook12-repo
+# macbook12
 macbook12-spi-driver-dkms
 ```
 
@@ -91,26 +93,10 @@ Add a hash-sign in front of `KERNEL-rt3562sta` in the `~/iso-profiles/shared/Pac
 #KERNEL-rt3562sta
 ```
 
-#### Make sure the macbook12 drivers are loaded at boot
-
-Create a file called `macbook12.conf` with the following content:
-
-```
-# macbook12 apple spi
-applespi
-spi_pxa2xx_platform
-intel_lpss_pci
-```
-
-... and copy it to the following two locations:
-
-- `~/iso-profiles/$ISO_PROFILE/desktop-overlay/etc/modules-load.d/macbook12.conf`
-- `~/iso-profiles/$ISO_PROFILE/live-overlay/etc/modules-load.d/macbook12.conf`
-
 ### Build iso
 
 ```
-export ISO_PROFILE=community/deepin
+export ISO_PROFILE=community/deepin    # or ISO_PROFILE=manjaro/kde
 cd ~/iso-profiles
 cd $(dirname $ISO_PROFILE)
 # `buildiso` does not need to be run as root!
