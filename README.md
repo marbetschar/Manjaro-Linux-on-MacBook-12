@@ -78,10 +78,11 @@ Server = https://manjaro.marco.betschart.name/$repo/$arch
 
 #### Add macbook12 package to iso profile
 
-Add the built macbook12 package name at the end to the list of packages in `Packages-Desktop` and `Packages-Live` (stored in `~/iso-profiles/$ISO_PROFILE`):
+Add the built macbook12 package name together with `KERNEL-headers` at the end to the list of packages in `Packages-Desktop` and `Packages-Live` (stored in `~/iso-profiles/$ISO_PROFILE`):
 
 ```
 # macbook12
+KERNEL-headers
 macbook12-spi-driver-dkms
 ```
 

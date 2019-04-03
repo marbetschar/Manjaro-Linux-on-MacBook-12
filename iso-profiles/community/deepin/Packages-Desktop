@@ -130,5 +130,6 @@ xdg-user-dirs
 xorg-xhost
 xorg-server
 
-# macbook12-repo
+# macbook12
+KERNEL-headers
 macbook12-spi-driver-dkms
