@@ -1,0 +1,188 @@
+adwaita-icon-theme
+alsa-firmware
+appimagelauncher
+baobab
+dconf-editor
+dmidecode
+hexchat
+gthumb
+evince
+>basic epiphany
+>extra firefox
+gdm
+manjaro-gdm-check #this check if nvidia closed drivers are installed and disable wayland session
+manjaro-gdm-theme #branding theme for GDM 
+gedit 
+gtksourceview-pkgbuild #highlight for PKGBUILD
+gnome-backgrounds
+gnome-calculator
+gnome-control-center
+gnome-desktop
+gnome-disk-utility
+gnome-font-viewer
+gnome-keyring
+>extra gnome-online-accounts
+>extra gnome-contacts
+gnome-screenshot
+gnome-session
+gnome-settings-daemon
+gnome-shell
+gnome-shell-extensions
+gnome-shell-extension-manjaro-update
+gnome-system-log
+gnome-system-monitor
+gnome-terminal
+gnome-themes-standard
+gnome-tweak-tool
+gnome-user-docs
+gnome-user-share
+gnome-wallpapers
+papirus-maia-icon-theme
+#gnome-screensaver #if use lightdm we need a screensaver 
+#gnome-initial-setup
+>extra gnome-calendar
+>extra bijiben
+>extra gnome-characters
+>extra gnome-clocks
+>extra gnome-weather
+>extra gnome-maps
+>extra gnome-todo
+>extra seahorse
+file-roller
+gparted
+grilo-plugins
+gst-libav
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-good
+gst-plugins-ugly
+gufw
+gvfs-afc
+gvfs
+gvfs-mtp
+gvfs-google
+gvfs-smb
+inxi
+imagewriter
+#cli tool#
+pacui
+mc
+mhwd-tui
+########
+manjaro-alsa
+manjaro-artwork
+manjaro-wallpapers-17.0
+manjaro-browser-settings
+manjaro-settings-manager-notifier
+manjaro-gnome-assets
+manjaro-hotfixes
+manjaro-pulse
+manjaro-hello
+mesa-demos
+mobile-broadband-provider-info
+modemmanager
+mousetweaks
+>multilib lib32-mesa-demos
+mutter
+nautilus
+nautilus-admin
+nautilus-empty-file
+netctl
+networkmanager-openconnect
+networkmanager-openvpn
+networkmanager-pptp
+networkmanager-vpnc
+nss-mdns
+numlockx
+openresolv
+pamac
+polkit-gnome
+powertop
+pulseaudio-bluetooth
+pulseaudio-ctl
+pulseaudio-zeroconf
+>extra simple-scan
+sushi
+alsa-utils
+avahi
+networkmanager
+ntp
+openssh
+terminus-font
+totem
+tracker
+tracker-miners
+ttf-bitstream-vera
+ttf-dejavu
+ttf-droid
+ttf-inconsolata
+ttf-indic-otf
+ttf-liberation
+usb_modeswitch
+arc-maia-icon-theme
+#firefox-arc-maia-settings #disable theming since upstream no adjust the theme
+vino
+xdg-su
+xdg-user-dirs
+xdg-user-dirs-gtk
+xdg-utils
+xf86-input-elographics
+xf86-input-evdev
+xf86-input-keyboard
+xf86-input-libinput
+xf86-input-mouse
+xf86-input-void
+xorg-server
+xorg-twm
+xorg-xinit
+yelp
+
+ms-office-online
+
+#extra depends for file-roller
+>extra gnome-getting-started-docs
+>extra p7zip
+>extra unrar
+>extra unace
+>extra lrzip
+>extra libreoffice-fresh
+>extra evolution
+>extra lollypop
+>extra empathy
+>extra telepathy-accounts-signon
+>extra uget
+>extra transmission-gtk
+>extra brasero
+>extra manjaro-documentation-en
+>extra jre8-openjdk
+>extra jre8-openjdk-headless
+#>extra flashplugin
+>extra libdvdcss
+>extra steam-manjaro
+>extra manjaro-printer
+>extra blueman
+>extra ffmpegthumbnailer
+>extra timeshift
+>extra kernel-alive
+
+#AUR complete support ( base devel + yaourt )
+#>extra autoconf
+#>extra automake
+#>extra binutils
+#>extra bison
+#>extra fakeroot
+#>extra flex
+#>extra gcc
+#>extra >multilib gcc-libs-multilib
+#>extra >multilib gcc-multilib
+#>extra libtool
+#>extra m4
+#>extra make
+#>extra patch
+#>extra subversion
+#>extra yaourt
+manjaro-aur-support #introduce for testing in community
+
+# macbook12
+KERNEL-headers
+macbook12-spi-driver-dkms
