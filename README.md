@@ -62,15 +62,14 @@ repo-add macbook12-repo.db.tar.gz *.pkg.tar.*
 
 ### Add macbook12 repository to iso profile
 
-Create `user-repos.conf` in your iso profile:
+Create `user-repos.conf` in the shared folder:
 
 ```
-ISO_PROFILE=community/deepin    # or: ISO_PROFILE=manjaro/kde    # or: ISO_PROFILE=manjaro/gnome
-cd ~/iso-profiles/$ISO_PROFILE
+cd ~/iso-profiles/shared
 vi user-repos.conf
 ```
 
-and add the following content:
+... add the following content:
 
 ```
 [macbook12-repo]
@@ -78,9 +77,17 @@ SigLevel = Optional TrustAll
 Server = https://manjaro.marco.betschart.name/$repo/$arch
 ```
 
+...  and link it into your iso profile:
+
+```
+ISO_PROFILE=community/deepin    # or: ISO_PROFILE=manjaro/kde    # or: ISO_PROFILE=manjaro/gnome
+cd ~/iso-profiles/$ISO_PROFILE
+ln -s ../../shared/user-repos.conf user-repos.conf
+```
+
 #### Add macbook12 package to iso profile
 
-Add the built macbook12 package name together with `KERNEL-headers` at the end to the list of packages in `Packages-Desktop` and `Packages-Live` (stored in `~/iso-profiles/$ISO_PROFILE`):
+Add the `macbook12-spi-driver-dkms` package name along with `KERNEL-headers` to the end of the list of packages in `Packages-Root` (stored in `~/iso-profiles/shared/`):
 
 ```
 # macbook12
