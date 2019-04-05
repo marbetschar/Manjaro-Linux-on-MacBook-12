@@ -112,11 +112,11 @@ cd $(dirname $ISO_PROFILE)
 
 #
 # `buildiso` does not need to be run as root!
+#
 # manjaro/gnome: use `-k linux420` instead!
-#   -> check the [Manjaro forum](https://forum.manjaro.org/t/gnome-installer-crashes-on-my-custom-spin/81827/5) for details
+#   -> https://forum.manjaro.org/t/gnome-installer-crashes-on-my-custom-spin/81827/5
 #
 buildiso -f -p $(basename $ISO_PROFILE) -k linux419 -b stable -a x86_64
-
 ```
 
 #### If you encounter an error saying...
