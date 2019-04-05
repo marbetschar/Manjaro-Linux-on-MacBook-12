@@ -9,7 +9,3 @@ mkinitcpio-nfs-utils
 nbd
 >sonar sonar-calamares-branding
 squashfs-tools
-
-# macbook12
-KERNEL-headers
-macbook12-spi-driver-dkms

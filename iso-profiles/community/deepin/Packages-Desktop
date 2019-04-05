@@ -124,12 +124,7 @@ xorg-twm
 xorg-xinit
 >extra xsane
 >extra xsane-gimp
-#>extra yaourt
->extra yay
+>extra yaourt
 xdg-user-dirs
 xorg-xhost
 xorg-server
-
-# macbook12
-KERNEL-headers
-macbook12-spi-driver-dkms

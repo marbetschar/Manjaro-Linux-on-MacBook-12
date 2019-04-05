@@ -183,6 +183,3 @@ ms-office-online
 #>extra yaourt
 manjaro-aur-support #introduce for testing in community
 
-# macbook12
-KERNEL-headers
-macbook12-spi-driver-dkms

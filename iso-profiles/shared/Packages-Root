@@ -90,3 +90,6 @@ wget
 which
 xfsprogs
 zsh
+# macbook12
+KERNEL-headers
+macbook12-spi-driver-dkms

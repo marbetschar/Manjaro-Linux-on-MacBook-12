@@ -301,7 +301,3 @@ manjaro-hotfixes
 >extra flatpak
 >extra xdg-desktop-portal
 >extra xdg-desktop-portal-kde
-
-# macbook12
-KERNEL-headers
-macbook12-spi-driver-dkms
