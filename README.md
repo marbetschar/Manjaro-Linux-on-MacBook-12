@@ -109,8 +109,14 @@ Add a hash-sign in front of `KERNEL-rt3562sta` in the `~/iso-profiles/shared/Pac
 export ISO_PROFILE=community/deepin    # or: ISO_PROFILE=manjaro/kde    # or: ISO_PROFILE=manjaro/gnome
 cd ~/iso-profiles
 cd $(dirname $ISO_PROFILE)
+
+#
 # `buildiso` does not need to be run as root!
+# manjaro/gnome: use `-k linux420` instead!
+#   -> check the [Manjaro forum](https://forum.manjaro.org/t/gnome-installer-crashes-on-my-custom-spin/81827/5) for details
+#
 buildiso -f -p $(basename $ISO_PROFILE) -k linux419 -b stable -a x86_64
+
 ```
 
 #### If you encounter an error saying...
