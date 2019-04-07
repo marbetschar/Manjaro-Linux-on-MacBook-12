@@ -1,6 +1,12 @@
 # Manjaro Linux on MacBook 12"
 Online repository with a customized Manjaro .iso which runs on MacBook 12".
 
+## Compatibility Matrix
+
+|                                 | Display | Trackpad | Keyboard | Webcam | Speaker | Microphone | Bluetooth |
+| :------------------------------ | :-----: | :------: | :------: | :----: | :-----: | :--------: | :-------: |
+| MacBook (Retina, 12-inch, 2017) | ✓       | ✓        | ✓        | ✗      | ✗       | ✗          | ✗
+
 ## Downloads
 
 - [Manjaro KDE for MacBook 12"](https://github.com/marbetschar/Manjaro-Linux-on-MacBook-12/releases)
