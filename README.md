@@ -3,9 +3,9 @@ Online repository with a customized Manjaro .iso which runs on MacBook 12".
 
 ## Compatibility Matrix
 
-|                                 | Display | Trackpad | Keyboard | Webcam | Speaker | Microphone | Bluetooth |
-| :------------------------------ | :-----: | :------: | :------: | :----: | :-----: | :--------: | :-------: |
-| MacBook (Retina, 12-inch, 2017) | ✓       | ✓        | ✓        | ✗      | ✗       | ✗          | ✗
+|                                     | Display | Trackpad | Keyboard | Webcam | Speaker | Microphone | Bluetooth |
+| :---------------------------------- | :-----: | :------: | :------: | :----: | :-----: | :--------: | :-------: |
+| **MacBook (Retina, 12-inch, 2017)** | ✓       | ✓        | ✓        | ✗      | ✗       | ✗          | ✗
 
 ## Downloads
 
