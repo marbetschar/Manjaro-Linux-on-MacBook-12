@@ -5,13 +5,20 @@ Online repository with a customized Manjaro .iso which runs on MacBook 12".
 
 |                                     | Display | Trackpad | Keyboard | Webcam | Speaker | Microphone | Bluetooth | Standby |
 | :---------------------------------- | :-----: | :------: | :------: | :----: | :-----: | :--------: | :-------: | :-------: |
-| **MacBook (Retina, 12-inch, 2017)** | ✓       | ✓        | ✓        | ✗      | ✗     | ✓            | ✗      | ✗      |
+| **MacBook (Retina, 12-inch, 2017)** | ✓       | ✓        | ✓        | ✗      | ✗     | ✓            | ✓      | ✗      |
 
 ## Downloads
 
 - [Manjaro KDE for MacBook 12"](https://github.com/marbetschar/Manjaro-Linux-on-MacBook-12/releases)
 - [Manjaro GNOME for MacBook 12"](https://github.com/marbetschar/Manjaro-Linux-on-MacBook-12/releases)
 - [Manjaro Deepin for MacBook 12"](https://github.com/marbetschar/Manjaro-Linux-on-MacBook-12/releases)
+
+## Additional software installed
+
+The MacBook contains hardware which does not work out of the box running a vanilla Linux. The following additional software was installed to add support for those:
+
+- **Trackpad & Keyboard:** [`macbook12-spi-driver-dkms`](https://aur.archlinux.org/packages/macbook12-spi-driver-dkms/) package from AUR repository.
+- **Bluetooth:** `linux-4.19.32` [custom patch](https://github.com/marbetschar/Manjaro-Linux-on-MacBook-12/blob/master/patches/linux-4.19.32_drivers-bluetooth-hci_bcm.patch) for kernel module `kernel/drivers/bluetooth/hci_uart.ko.xz`.
 
 
 ## How the .iso was built
@@ -101,12 +108,30 @@ KERNEL-headers
 macbook12-spi-driver-dkms
 ```
 
-#### Ignore KERNEL-rt3562sta
+### Ignore KERNEL-rt3562sta
 
 Add a hash-sign in front of `KERNEL-rt3562sta` in the `~/iso-profiles/shared/Packages-Mhwd` file to avoid installing this package if you are building for `linux419` - otherwise you'll likely encounter a `error: target not found: linux419-rt3562sta` during the `buildiso` command:
 
 ```
 #KERNEL-rt3562sta
+```
+
+### Link patched Bluetooth kernel module
+
+Link the patched kernel module into the live- and desktop file systems of your iso-profile:
+
+```
+ISO_PROFILE=community/deepin    # or: ISO_PROFILE=manjaro/kde    # or: ISO_PROFILE=manjaro/gnome
+
+cd ~/iso-profiles/$ISO_PROFILE
+mkdir -p live-overlay/usr/lib/modules/4.19.32-1-MANJARO/kernel/drivers/bluetooth
+cd live-overlay/usr/lib/modules/4.19.32-1-MANJARO/kernel/drivers/bluetooth/
+ln -s ../../../../../../../../../../shared/macbook12/overlay/usr/lib/modules/4.19.32-1-MANJARO/kernel/drivers/bluetooth/hci_uart.ko.xz
+
+cd ~/iso-profiles/$ISO_PROFILE
+mkdir -p desktop-overlay/usr/lib/modules/4.19.32-1-MANJARO/kernel/drivers/bluetooth
+cd desktop-overlay/usr/lib/modules/4.19.32-1-MANJARO/kernel/drivers/bluetooth/
+ln -s ../../../../../../../../../../shared/macbook12/overlay/usr/lib/modules/4.19.32-1-MANJARO/kernel/drivers/bluetooth/hci_uart.ko.xz
 ```
 
 ### Build iso
@@ -118,9 +143,6 @@ cd $(dirname $ISO_PROFILE)
 
 #
 # `buildiso` does not need to be run as root!
-#
-# manjaro/gnome: use `-k linux420` instead!
-#   -> https://forum.manjaro.org/t/gnome-installer-crashes-on-my-custom-spin/81827/5
 #
 buildiso -f -p $(basename $ISO_PROFILE) -k linux419 -b stable -a x86_64
 ```
