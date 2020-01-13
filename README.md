@@ -20,6 +20,8 @@ The MacBook contains hardware which does not work out of the box running a vanil
 - **Trackpad & Keyboard:** [`macbook12-spi-driver-dkms`](https://aur.archlinux.org/packages/macbook12-spi-driver-dkms/) package from AUR repository.
 - **Bluetooth:** `linux-4.19.32` [custom patch](https://github.com/marbetschar/Manjaro-Linux-on-MacBook-12/blob/master/patches/linux-4.19.32_drivers-bluetooth-hci_bcm.patch) for kernel module `kernel/drivers/bluetooth/hci_uart.ko.xz`.
 
+See [https://github.com/leifliddy/macbook12-bluetooth-driver](https://github.com/leifliddy/macbook12-bluetooth-driver) for further instructions how to create a Bluetooth patch for other Kernel versions.
+
 
 ## How the .iso was built
 
